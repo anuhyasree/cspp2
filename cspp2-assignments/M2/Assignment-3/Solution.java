@@ -1,11 +1,12 @@
- /**
+
+/**
  * { item_description }
  */
 import java.util.Scanner;
 /**
  * Class for solution.
  */
-public class Solution {
+class Solution {
     /**
      * { function_description }
      *
@@ -32,11 +33,17 @@ public class Solution {
     public static long power(int base, int exponent) {
         if (exponent != 0) {
 
-            return (base * power(base, exponent - 1));
-        }
+            return (base * power(base, exponent - 1));}
          else {
             return 1;
         }
         
     }
 }
+
+
+
+
+
+
+
