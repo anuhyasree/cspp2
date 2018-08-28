@@ -1,13 +1,12 @@
-
-/**
+ /**
  * { item_description }
  */
 import java.util.Scanner;
 /**
  * Class for solution.
  */
-class Solution {
-    /*
+public class Solution {
+    /**
      * { function_description }
      *
      * @param      args  The arguments
@@ -35,7 +34,8 @@ class Solution {
 
             return (base * power(base, exponent - 1));}
          else {
-            return 1;}
+            return 1;
+        }
         
     }
 }
