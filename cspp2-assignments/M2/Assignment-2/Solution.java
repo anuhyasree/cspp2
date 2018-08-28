@@ -27,7 +27,7 @@ public final class Solution {
         long result = power(base, exponent);
         System.out.println(result);
     }
-    /**.
+    /**
      * { function_description }
      *
      * @param      base      The base
@@ -35,7 +35,7 @@ public final class Solution {
      *
      * @return     { description_of_the_return_value }
      */
-    public static long power(final int base, final int exponent)
+    public final static long power(final int base, final int exponent)
     /**.
      * { item_description }
      */ {
@@ -46,4 +46,5 @@ public final class Solution {
         }
     }
 }
+
 
