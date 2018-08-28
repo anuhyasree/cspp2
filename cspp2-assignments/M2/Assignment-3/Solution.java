@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * Class for solution.
  */
-class Solution {
+public class Solution {
     /**
      * { function_description }
      *
@@ -34,7 +34,7 @@ class Solution {
 
             return (base * power(base, exponent - 1));
         }
-         else{
+         else {
             return 1;
         }
         
