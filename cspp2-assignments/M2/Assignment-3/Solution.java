@@ -5,17 +5,14 @@ import java.util.Scanner;
 /**
  * Class for solution.
  */
-public class Solution {    
-    /*
-    Do not modify this main function.
-    */
+public class Solution {
     /**
      * { function_description }
      *
      * @param      args  The arguments
      */
     public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);      
+        Scanner s = new Scanner(System.in);
         int base = s.nextInt();
         int exponent = s.nextInt();
         long result = power(base, exponent);
@@ -32,7 +29,7 @@ public class Solution {
      *
      * @return     { description_of_the_return_value }
      */
-    public static long power(int base,int exponent){
+    public static long power(int base, int exponent){
         if (exponent != 0) {
 
             return (base * power(base, exponent - 1));
@@ -43,3 +40,4 @@ public class Solution {
         
     }
 }
+
