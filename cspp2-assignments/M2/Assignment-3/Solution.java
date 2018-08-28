@@ -1,4 +1,4 @@
-/**
+ /**
  * { item_description }
  */
 import java.util.Scanner;
@@ -11,7 +11,7 @@ class Solution {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args){
         Scanner s = new Scanner(System.in);
         int base = s.nextInt();
         int exponent = s.nextInt();
@@ -29,15 +29,12 @@ class Solution {
      *
      * @return     { description_of_the_return_value }
      */
-    public static long power(int base, int exponent)
-    {
-        if (exponent != 0)
-        {
+    public static long power(int base, int exponent){
+        if (exponent != 0){
 
             return (base * power(base, exponent - 1));
         }
-        else
-        {
+        else{
             return 1;
         }
         
