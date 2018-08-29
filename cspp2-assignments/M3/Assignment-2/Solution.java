@@ -11,11 +11,11 @@ public final class Solution {
     /**.
      * Constructs the object.
      */
-    public static final int N_O = 10;
+    public static final int mod = 10;
     /**
      * Constructs the object.
      */
-    public static final int N_U_M = 7;
+    public static final int seven = 7;
     /**
      * Constructs the object.
      */
@@ -29,9 +29,9 @@ public final class Solution {
      *
      * @param      n     { parameter_description }
      *
-     * @return     { description_of_the_return_value }
+     * @return     { descriptiomodf_the_return_value }
      */
-    static int numberof7s(final int n) {
+    static int find(final int n) {
         /**.
          * { Function to return the number of 7's present in one number}
          */
@@ -41,10 +41,10 @@ public final class Solution {
         /**.
          * { item_description }
          */
-        if (x % N_O == N_U_M) {
+        if (x % mod == seven) {
         count++;
         }
-        x = x / N_O;
+        x = x / mod;
     }
     /**.
      * { Returns the value if the 7 is present or not and how many are present}
@@ -58,9 +58,9 @@ public final class Solution {
      *
      * @param      n     { parameter_description }
      *
-     * @return     { description_of_the_return_value }
+     * @return     { descriptiomodf_the_return_value }
      */
-    static int numberinrange(final int n) {
+    static int function(final int n) {
         /**.
          * { Function to retuen the Number of 7's present until n value }
          */
@@ -68,8 +68,8 @@ public final class Solution {
         int count = 0;
         // Count 7's in every number
         // from 7 to n
-        for (int i = N_U_M; i <= n; i++) {
-        count += numberof7s(i);
+        for (int i = seven; i <= n; i++) {
+        count += find(i);
     }
         return count;
 }
@@ -84,7 +84,7 @@ public final class Solution {
          */
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
-        System.out.println(numberinrange(n));
+        System.out.println(function(n));
     }
 }
 
