@@ -28,7 +28,7 @@ public final class Solution {
          * {Recursive function to find the power }
          */
         if (exponent != 0) {
-            return (base * power(base, exponent - 1));
+            return base * power(base, exponent - 1);
         } else {
             return 1;
         }
