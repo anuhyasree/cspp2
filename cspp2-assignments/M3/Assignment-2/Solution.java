@@ -11,11 +11,11 @@ public final class Solution {
     /**.
      * Constructs the object.
      */
-    public static final int mod = 10;
+    public static final int NUM = 10;
     /**
      * Constructs the object.
      */
-    public static final int seven = 7;
+    public static final int SEVEN = 7;
     /**
      * Constructs the object.
      */
@@ -29,7 +29,7 @@ public final class Solution {
      *
      * @param      n     { parameter_description }
      *
-     * @return     { descriptiomodf_the_return_value }
+     * @return     { descriptioNUMf_the_return_value }
      */
     static int find(final int n) {
         /**.
@@ -41,10 +41,10 @@ public final class Solution {
         /**.
          * { item_description }
          */
-        if (x % mod == seven) {
+        if (x % NUM == SEVEN) {
         count++;
         }
-        x = x / mod;
+        x = x / NUM;
     }
     /**.
      * { Returns the value if the 7 is present or not and how many are present}
@@ -58,7 +58,7 @@ public final class Solution {
      *
      * @param      n     { parameter_description }
      *
-     * @return     { descriptiomodf_the_return_value }
+     * @return     { descriptioNUMf_the_return_value }
      */
     static int function(final int n) {
         /**.
@@ -68,7 +68,7 @@ public final class Solution {
         int count = 0;
         // Count 7's in every number
         // from 7 to n
-        for (int i = seven; i <= n; i++) {
+        for (int i = SEVEN; i <= n; i++) {
         count += find(i);
     }
         return count;
