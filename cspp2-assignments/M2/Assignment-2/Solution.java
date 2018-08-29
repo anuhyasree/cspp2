@@ -1,10 +1,11 @@
 
+
 /**.
- * { Program to find the a power b with the hep of recursion }
+ * { Program to find the Qudratci roots of the equation}
  */
 import java.util.Scanner;
 /**.
- * Class for solution.
+ * { item_description }
  */
 public final class Solution {
     /**.
@@ -18,20 +19,19 @@ public final class Solution {
     /**.
      * { function_description }
      *
-     * @param      base      The base
-     * @param      exponent  The exponent
-     *
-     * @return     { description_of_the_return_value }
+     * @param      a     { parameter_description }
+     * @param      b     { parameter_description }
+     * @param      c     { parameter_description }
      */
-    public static long power(final int base, final int exponent) {
+    public static void rootsOQD(final int a, final int b, final int c) {
         /**.
-         * {Recursive function to find the power }
+         * { Function definition }
          */
-        if (exponent != 0) {
-            return base * power(base, exponent - 1);
-        } else {
-            return 1;
-        }
+        double sq = java.lang.Math.sqrt((b * b) - (2 * 2 * a * c));
+        double quad1 = ((-b + sq) / (2 * a));
+        double quad2 = ((-b - sq) / (2 * a));
+        System.out.println(quad1 + " " + quad2);
+
     }
     /**.
      * { function_description }
@@ -40,15 +40,15 @@ public final class Solution {
      */
     public static void main(final String[] args) {
         /**.
-         * { Main Function}
+         * { main function }
          */
-        Scanner s = new Scanner(System.in);
-        int base = s.nextInt();
-        int exponent = s.nextInt();
-        long result = power(base, exponent);
-        System.out.println(result);
+        Scanner scan = new Scanner(System.in);
+        int a = scan.nextInt();
+        int b = scan.nextInt();
+        int c = scan.nextInt();
+        rootsOQD(a, b, c);
     }
     /**.
-    Need to write the power function and print the output.
+    Need to write the rootsOfQuadraticEquation function and print the output.
     */
 }
