@@ -35,7 +35,7 @@ public final class Solution {
      *
      * @return     { description_of_the_return_value }
      */
-    public final static long power(final int base, final int exponent)
+    public final static long power(final long base, final long exponent)
     /**.
      * { item_description }
      */ {
