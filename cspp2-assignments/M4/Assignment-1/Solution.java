@@ -20,10 +20,10 @@ public class Solution
 				max = a[i];
 
 			}
-			System.out.println("largest value is: "+max);
+			
 			
 		}
-		
+		System.out.println(max);
 
 	}
 }
