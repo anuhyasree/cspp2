@@ -1,13 +1,26 @@
 
-import java.util.*;
-public class Solution
-{/*
+import java.util.Scanner;
+/**
+ * Class for solution.
+ */
+public class Solution {
+	/**
+	 * { item_description }
+	 */
+   /*
 	Fill this main function to print maximum of given array
 	*/
-	public static void main(String[] args)
-	{
-		Scanner sc=new Scanner(System.in);
-		int n= sc.nextInt();
+	/**
+	 * { function_description }
+	 *
+	 * @param      args  The arguments
+	 */
+	public static void main(String[] args) {
+		/**
+		 * { var_description }
+		 */
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
 		int a[] = new int[n];
 		int i,max;
 		for (i = 0; i < n; i++) {
@@ -20,8 +33,7 @@ public class Solution
 				max = a[i];
 
 			}
-			
-			
+					
 		}
 		System.out.println(max);
 
