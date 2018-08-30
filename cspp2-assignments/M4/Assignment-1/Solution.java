@@ -7,7 +7,7 @@ public final class Solution {
     /**.
      * { item_description }
      */
-    private Solution(){
+    private Solution() {
 
     }
    /*
@@ -18,17 +18,17 @@ public final class Solution {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         /**.
          * { var_description }
          */
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int a[] = new int[n];
-        int i,max;
+        int[]a = new int[n];
+        int i, max;
         for (i = 0; i < n; i++) {
             int b = sc.nextInt();
-            a[i] = b; 
+            a[i] = b;
         }
         max = a[0];
         for (i = 0; i < n; i++) {
@@ -36,7 +36,6 @@ public final class Solution {
                 max = a[i];
 
             }
-                    
         }
         System.out.println(max);
 
