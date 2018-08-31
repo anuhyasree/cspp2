@@ -35,11 +35,12 @@ final class Solution {
      *
      * @return     { description_of_the_return_value }
      */
+    //public static final String s;
     private static String reverseString(String s) {
         String reverse = " ";
         for (int i = 0; i < s.length(); i++) {
             reverse = s.charAt(i) + reverse;
-         } 
+         }
          return reverse;
     }
 }
