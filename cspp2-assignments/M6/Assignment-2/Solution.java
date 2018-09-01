@@ -35,7 +35,7 @@ final class Solution {
                     a[i][j] = value * 100;
                 } else {
                     value = a[i][j] / 10;
-                    a[i][j] = value * 0;
+                    a[i][j] = value * 100;
                 }
             }
         }
