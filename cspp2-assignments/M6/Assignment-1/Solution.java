@@ -18,6 +18,11 @@ public final class Solution {
      * @param      n     n value
      */
     public static final int THREE = 3;
+    /**.
+     * { function_description }
+     *
+     * @param      n     { parameter_description }
+     */
     static void oddComposites(final int n) {
         int count = 0;
         for(int i = THREE; i <= n; i++) {
