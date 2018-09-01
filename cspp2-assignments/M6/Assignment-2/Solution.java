@@ -39,7 +39,7 @@ final class Solution {
                     //a[i][j] = value + hundred;
                     a[i][j] = value * hundred;
                 } else {
-                    value = a[i][j] / ten;
+                    value = a[i][j] / hundred;
                     a[i][j] = value * hundred;
                     a[i][j] = value * 0;
                 }
