@@ -31,9 +31,8 @@ public final class Solution {
 
                 count = 0;
                 for(int j = THREE; j < i; j++) {
-
+                    
                     if(i % j == 0) {
-                        
                         count++;
                     }
                 }
