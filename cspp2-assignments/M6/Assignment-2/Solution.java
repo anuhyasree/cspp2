@@ -31,6 +31,7 @@ final class Solution {
                     value = a[i][j] / 100;
                     if (a[i][j] / 100 >= 0) {
                         value += 1;
+                        value = a[i][j] * 0;
                     }
                     a[i][j] = value * 100;
                 } else {
