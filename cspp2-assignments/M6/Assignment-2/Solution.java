@@ -32,7 +32,7 @@ final class Solution {
                     if (a[i][j] / 100 >= 0) {
                         value += 1;
                     }
-                    value = a[i][j] * 100;
+                    a[i][j] = value * 100;
                 }
                 else {
                     value = a[i][j] / 10;
