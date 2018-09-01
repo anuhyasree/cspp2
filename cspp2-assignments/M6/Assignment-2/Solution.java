@@ -41,7 +41,7 @@ final class Solution {
                 } else {
                     value = a[i][j] / hundred;
                     a[i][j] = value * hundred;
-                    a[i][j] = value * 0;
+                    //a[i][j] = value * 0;
                 }
             }
         }
