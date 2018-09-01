@@ -25,22 +25,22 @@ final class Solution {
     static int[][] roundHundred(final int[][] a, final int rows,
         final int columns) {
         int value = 0;
-        final int HUNDRED = 100;
-        final int FIFTY = 50;
-        final int TEN = 10;
+        final int hundred = 100;
+        final int fifty = 50;
+        final int ten = 10;
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
-                if (a[i][j] % HUNDRED >= FIFTY) {
-                    value = a[i][j] / HUNDRED;
-                    if (a[i][j] / HUNDRED >= 0) {
+                if (a[i][j] % hundred >= fifty) {
+                    value = a[i][j] / hundred;
+                    if (a[i][j] / hundred >= 0) {
                         value += 1;
-                        a[i][j] = value + HUNDRED;
+                        a[i][j] = value + hundred;
                     }
-                    //a[i][j] = value + HUNDRED;
-                    a[i][j] = value * HUNDRED;
+                    //a[i][j] = value + hundred;
+                    a[i][j] = value * hundred;
                 } else {
-                    value = a[i][j] / TEN;
-                    a[i][j] = value * HUNDRED;
+                    value = a[i][j] / ten;
+                    a[i][j] = value * hundred;
                     a[i][j] = value * 0;
                 }
             }
