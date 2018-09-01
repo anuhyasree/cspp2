@@ -33,10 +33,10 @@ final class Solution {
                         value += 1;
                     }
                     a[i][j] = value * 100;
+                    value =  a[i][j] * 0;
                 } else {
                     value = a[i][j] / 10;
                     a[i][j] = value * 100;
-                    value =  a[i][j] * 0;
                 }
             }
         }
