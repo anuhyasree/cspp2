@@ -32,12 +32,12 @@ public final class Solution {
                     if(i % j == 0) {
                         count++;
                     }
-                } 
+                }
                 if (count > 0) {
                     System.out.println(i);
                 }
             }
-        }   
+        }
     }
     /**
     * main method as driver program.
