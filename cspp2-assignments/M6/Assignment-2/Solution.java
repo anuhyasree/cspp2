@@ -27,7 +27,7 @@ final class Solution {
         int value = 0;
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
-                if (a[i][j] % 100 > 50) {
+                if (a[i][j] % 100 >= 50) {
                     value = a[i][j] / 100;
                     if (a[i][j] / 100 >= 0) {
                         value += 1;
