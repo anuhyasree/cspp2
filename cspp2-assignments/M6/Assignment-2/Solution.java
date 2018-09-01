@@ -3,7 +3,7 @@ import java.util.Scanner;
  * Write a java program to round the
  * elements of a matrix to the nearest 100.
  *
- * @author : 
+ * @author :
  */
 final class Solution {
     /**
@@ -38,7 +38,7 @@ final class Solution {
                 } else {
                     value = a[i][j] / 10;
                     a[i][j] = value * 100;
-                    //a[i][j] = value * 0;
+                    a[i][j] = value * 0;
                 }
             }
         }
