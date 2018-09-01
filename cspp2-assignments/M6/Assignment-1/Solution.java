@@ -25,14 +25,14 @@ public final class Solution {
      */
     static void oddComposites(final int n) {
         int count = 0;
-        for(int i = THREE; i <= n; i++) {
+        for (int i = THREE; i <= n; i++) {
 
             if (i % 2 != 0) {
 
                 count = 0;
-                for(int j = THREE; j < i; j++) {
-                    
-                    if(i % j == 0) {
+                for (int j = THREE; j < i; j++) {
+
+                    if (i % j == 0) {
                         count++;
                     }
                 }
