@@ -6,7 +6,7 @@ class InputValidator {
     /**.
      * { var_description }
      */
-    String input;
+    private String input;
     /**.
      * Constructs the object.
      *
@@ -18,21 +18,31 @@ class InputValidator {
          */
         this.input = input;
     }
+    /**.
+     * { function_description }
+     *
+     * @param      input  The input
+     *
+     * @return     { description_of_the_return_value }
+     */
     public static boolean validateData(final String input) {
         /**.
          * { item_description }
          */
-        return input.length()>=6;
+        return input.length()>= 6;
     }
 }
+/**.
+ * Class for solution.
+ */
 public class Solution {
     /**.
      * { item_description }
      */
     public static void main(String args[]) {
-        Scanner s=new Scanner(System.in);
-        String input=s.next();
-        InputValidator i=new InputValidator(input);     
+        Scanner s = new Scanner(System.in);
+        String input = s.next();
+        InputValidator i = new InputValidator(input);
         System.out.println(i.validateData(input));
 
     }
