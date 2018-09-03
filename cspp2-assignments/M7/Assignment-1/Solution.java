@@ -12,7 +12,8 @@ class InputValidator {
      *
      * @param      input  The input
      */
-    public InputValidator(final String input) {
+    public static final int SIX = 6;
+    protected InputValidator(final String input) {
         /**.
          * { item_description }
          */
@@ -29,7 +30,7 @@ class InputValidator {
         /**.
          * { item_description }
          */
-        return input.length()>= 6;
+        return input.length()>= SIX;
     }
 }
 /**.
@@ -40,6 +41,9 @@ public class Solution {
      * { item_description }
      */
     public static void main(String args[]) {
+        /**.
+         * { var_description }
+         */
         Scanner s = new Scanner(System.in);
         String input = s.next();
         InputValidator i = new InputValidator(input);
