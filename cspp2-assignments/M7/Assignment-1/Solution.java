@@ -13,6 +13,11 @@ class InputValidator {
      * @param      input  The input
      */
     public static final int SIX = 6;
+    /**.
+     * Constructs the object.
+     *
+     * @param      input  The input
+     */
     protected InputValidator(final String input) {
         /**.
          * { item_description }
