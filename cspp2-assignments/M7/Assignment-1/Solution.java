@@ -6,7 +6,7 @@ class InputValidator {
     /**.
      * { var_description }
      */
-    private String input;
+    private String in_put;
     /**.
      * Constructs the object.
      *
@@ -22,7 +22,7 @@ class InputValidator {
         /**.
          * { item_description }
          */
-        this.input = input;
+        this.in_put = input;
     }
     /**.
      * { function_description }
@@ -35,17 +35,27 @@ class InputValidator {
         /**.
          * { item_description }
          */
-        return input.length()>= SIX;
+        return input.length() >= SIX;
     }
 }
 /**.
  * Class for solution.
  */
-public class Solution {
-    /**.
+public class Solution {    
+    /**
      * { item_description }
      */
-    public static void main(String args[]) {
+    private Solution() {
+        /**
+         * { item_description }
+         */
+    }
+    /**
+     * { function_description }
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
         /**.
          * { var_description }
          */
