@@ -326,8 +326,8 @@ public class List {
                 case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
                 break;
-                case "default":
-                System.out.println("default");
+                default:
+                //System.out.println("default");
                 break;
             }
         }
