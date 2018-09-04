@@ -59,7 +59,14 @@ public class List {
     /**.
      * { var_description }
      */
+    private static final int TEN = 10;
+    /**.
+     * { var_description }
+     */
     private int[] a;
+    /**.
+     * { var_description }
+     */
     private int size;
     /**.
      * Constructs the object.
@@ -77,7 +84,7 @@ public class List {
         // An empty list has how many items?
         // That is the initial value to use for size.
         size = 0;
-        a = new int[10];
+        a = new int[TEN];
         /**.
          * { item_description }
          */
