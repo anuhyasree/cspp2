@@ -167,8 +167,7 @@ public class List {
         }
         a[size - 1] = 0;
         size--;
-         }
-         else {
+         }else {
             System.out.println("Invalid Position Exception");
         }
 
