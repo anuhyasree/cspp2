@@ -161,10 +161,10 @@ public class List {
         /**.
          * { item_description }
          */
-        for (int i = index; i < size-1; i++) {
+        for (int i = index; i < size - 1; i++) {
             a[i] = a[i + 1];
         }
-        a[size-1] = 0;
+        a[size - 1] = 0;
         size--;
     }
 
@@ -224,12 +224,11 @@ public class List {
          */
         String str = "[";
         for (int i = 0; i < size - 1; i++) {
-            str = str + a[i] + ",";           
+            str = str + a[i] + ",";
         }
         str = str + a[size - 1] + "]";
         return str;
-    } 
-    
+    }
     /*
      * Contains return true if the list has
      * the item passed as an argument to the method
@@ -256,7 +255,7 @@ public class List {
     }
 
     /*
-     * Returns the index of the first occurrence 
+     * Returns the index of the first occurrence
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
@@ -276,7 +275,6 @@ public class List {
                 return i;
             }
         }
-        
         return -1;
     }
 
@@ -285,7 +283,7 @@ public class List {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         /**.
          * { var_description }
          */
@@ -327,6 +325,8 @@ public class List {
                 break;
                 case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
+                break;
+                case "default":
                 break;
             }
         }
