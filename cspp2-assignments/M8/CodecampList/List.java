@@ -48,13 +48,16 @@ public class List {
      * So, to keep track of the size we need a variable called size
      * Again, we use private as we don't want that size variable
      * to be accessed by the methods that are outside of the List class.
-     * 
+     *
      */
 
 
     /*
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
+     */
+    /**.
+     * { var_description }
      */
     private int[] a;
     private int size;
@@ -152,10 +155,10 @@ public class List {
         /**.
          * { item_description }
          */
-        for (int i=index;i < size-1;i++) {
-            a[i] = a[i+1];            
+        for (int i = index; i < size-1; i++) {
+            a[i] = a[i + 1];
         }
-        a[size-1] = 0;
+        a[size - 1] = 0;
         size--;
     }
 
@@ -214,10 +217,10 @@ public class List {
          * { var_description }
          */
         String str = "[";
-        for (int i = 0;i < size-1;i++) {
+        for (int i = 0; i < size - 1; i++) {
             str = str + a[i] + ",";           
         }
-        str = str + a[size-1]+"]";
+        str = str + a[size - 1] + "]";
         return str;
     } 
     
@@ -238,7 +241,7 @@ public class List {
         /**.
          * { item_description }
          */
-        for (int element:a) {
+        for (int element : a) {
             if (element == item) {
                 return true;
                 
@@ -264,7 +267,7 @@ public class List {
         /**.
          * { item_description }
          */
-        for (int i=0;i < a.length-1;i++) {
+        for (int i = 0; i < a.length - 1; i++) {
             if (a[i] == item) {
                 return i;
                 
