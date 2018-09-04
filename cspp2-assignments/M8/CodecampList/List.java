@@ -161,11 +161,17 @@ public class List {
         /**.
          * { item_description }
          */
-        for (int i = index; i < size - 1; i++) {
+        if (index < size) {
+             for (int i = index; i < size - 1; i++) {
             a[i] = a[i + 1];
         }
         a[size - 1] = 0;
         size--;
+             
+         }else {
+            System.out.println("Invalid Position Exception");
+        }
+
     }
 
     /*
@@ -321,7 +327,9 @@ public class List {
                 System.out.println(l.indexOf(Integer.parseInt(tokens[1])));
                 break;
                 case "get":
-                System.out.println(l.get(Integer.parseInt(tokens[1])));
+                if ((Integer.parseInt(tokens[1]) < l.size)) {
+                   System.out.println(l.get(Integer.parseInt(tokens[1])));  
+                 } 
                 break;
                 case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
