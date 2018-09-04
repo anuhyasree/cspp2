@@ -327,6 +327,7 @@ public class List {
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
                 break;
                 case "default":
+                System.out.println("default");
                 break;
             }
         }
