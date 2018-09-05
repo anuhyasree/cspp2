@@ -20,11 +20,15 @@ import java.util.Scanner;
 /**.
  * Class for fibonacci.
  */
-public class Fibonacci
+public class Fibonacci {
 /**.
  * { item_description }
  */
-{
+    private Fibonacci() {
+        /**.
+         * { item_description }
+         */
+    }
     /*
      * fib is a static method takes a argument n
      * n is the count of the fibonacci numbers to be generated.
@@ -39,15 +43,15 @@ public class Fibonacci
      *
      * @return     { description_of_the_return_value }
      */
-    public static List fib(int n) {
+    public static List fib(final int n) {
         /**.
          * { var_description }
          */
         List fib1 = new List(n);     
         fib1.add(0);
         fib1.add(1);
-        for (int i =2;i < n;i++) {
-            int fibbbb = fib1.get(i-1) + fib1.get(i-2); 
+        for (int i = 2; i < n; i++) {
+            int fibbbb = fib1.get(i - 1) + fib1.get(i - 2); 
             fib1.add(fibbbb);
             
         }
@@ -59,7 +63,7 @@ public class Fibonacci
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         /**.
          * { var_description }
          */
