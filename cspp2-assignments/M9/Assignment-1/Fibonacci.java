@@ -31,7 +31,7 @@ public class Fibonacci
         fib1.add(0);
         fib1.add(1);
         for (int i =0;i <= n;i++) {
-            int fibbbb = fib1.get(n-1) + fib1.get(n-2); 
+            int fibbbb = fib1.get(i-1) + fib1.get(i-2); 
             fib1.add(fibbbb);
             
         }
