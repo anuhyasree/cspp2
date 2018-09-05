@@ -20,7 +20,7 @@ import java.util.Scanner;
 /**.
  * Class for fibonacci.
  */
-public class Fibonacci {
+public final class Fibonacci {
 /**.
  * { item_description }
  */
@@ -47,18 +47,17 @@ public class Fibonacci {
         /**.
          * { var_description }
          */
-        List fib1 = new List(n);     
+        List fib1 = new List(n);
         fib1.add(0);
         fib1.add(1);
         for (int i = 2; i < n; i++) {
-            int fibbbb = fib1.get(i - 1) + fib1.get(i - 2); 
+            int fibbbb = fib1.get(i - 1) + fib1.get(i - 2);
             fib1.add(fibbbb);
-            
         }
         return fib1;
     }
 
-	/**.
+    /**.
      * { function_description }
      *
      * @param      args  The arguments
@@ -72,3 +71,4 @@ public class Fibonacci {
         System.out.println(fib(n));
     }
 }
+
