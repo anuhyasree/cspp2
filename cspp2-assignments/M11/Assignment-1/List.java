@@ -257,10 +257,8 @@ public class List {
     * Think about this case and make the method
     * the simpler.
     */
-    public void clear()
-    {
-    // write the logic for clear.
-
+    public void clear() {
+        size = 0;
     }
 
     public static void main(String[] args) {
