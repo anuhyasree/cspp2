@@ -366,7 +366,16 @@ public class List {
    */
   public boolean equals(final List compList) {
     // Replace the code below
-    return this.toString().equals(toString());
+    if (size != compList.size()) {
+      return false;
+    } else {
+      for (int i = 0; i < size; i++) {
+        if (list[i] != compList.get(i)) {
+          return false;
+        }
+      }
+    }
+    return true;
   }
   /*
   * Removes all the elements from list
