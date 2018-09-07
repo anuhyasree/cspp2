@@ -175,6 +175,9 @@ public class List {
          * { var_description }
          */
         String str = "[";
+        if (size == 0) {
+            return "[]";            
+        }
         for (int i = 0; i < size - 1; i++) {
             str = str + a[i] + ",";
         }
@@ -228,7 +231,7 @@ public class List {
     */
      public void removeAll(int[] newArray)
      {
-        // write the logic 
+         
 
      }
     /*
