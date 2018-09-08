@@ -52,14 +52,14 @@ class Set {
     }
     public String toString() {
         if (size == 0) {
-            return "[]";
+            return "{}";
         }
-        String str = "[";
+        String str = "{";
         int i = 0;
         for (i = 0; i < size - 1; i++) {
             str = str + set[i] + ",";
         }
-        str = str + set[i] + "]";
+        str = str + set[i] + "}";
         return str;
     }
     public Set intersection(Set set) {
