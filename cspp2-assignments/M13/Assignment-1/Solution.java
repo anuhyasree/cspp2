@@ -33,11 +33,11 @@ class Set {
         /**.
          * { item_description }
          */
-        for (int element : set) {
-            if (element == item) {
-                return true;
-            }
-        }
+        // for (int element : set) {
+        //     if (element == item) {
+        //         return true;
+        //     }
+        // }
         return false;
     }
     public void add(final int[] items) {
