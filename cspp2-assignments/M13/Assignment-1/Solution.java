@@ -7,39 +7,88 @@ import java.util.Arrays;
  * @author :
  */
 class Set {
+    /**.
+     * { var_description }
+     */
     private int[] set;
+    /**.
+     * { var_description }
+     */
     private int size;
+    /**.
+     * Constructs the object.
+     */
 
+    /**.
+     * Constructs the object.
+     */
     public Set() {
+        /**.
+         * { var_description }
+         */
         final int a = 10;
         set = new int[a];
         size = 0;
 
     }
+    /**.
+     * { function_description }
+     *
+     * @param      item  The item
+     */
     public void add(final int item) {
+        /**.
+         * { item_description }
+         */
         if (size == set.length) {
             resize();
         }
         set[size++] = item;
     }
+    /**.
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int size() {
+        /**.
+         * { item_description }
+         */
         return size;
     }
+    /**.
+     * { function_description }
+     */
     private void resize() {
+        /**.
+         * { item_description }
+         */
         set = Arrays.copyOf(set, (set.length * 2));
     }
 
+    /**.
+     * { function_description }
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
     public boolean contains(final int item) {
         /**.
          * { item_description }
          */
-        // for (int element : set) {
-        //     if (element == item) {
-        //         return true;
-        //     }
-        // }
+        for (int element : set) {
+            if (element == item) {
+                return true;
+            }
+        }
         return false;
     }
+    /**.
+     * { function_description }
+     *
+     * @param      items  The items
+     */
     public void add(final int[] items) {
         // write the logic
         int len = items.length + size;
