@@ -112,6 +112,16 @@ public class List {
          */
         a[size++] = item;
     }
+    public int count(int item) {
+        int count = 0;
+        for (int i=0;i < size;i++) {
+            if (a[i] == item) {
+                count++;                
+            }
+            
+        }
+        return count;
+    }
 
     /*
      * The size method returns the value of the size.
