@@ -2,16 +2,35 @@ import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
 
+/**.
+ * Exception for signaling set empty errors.
+ */
 class SetEmptyException extends Exception {
+    /**.
+     * Constructs the object.
+     *
+     * @param      s     { parameter_description }
+     */
     SetEmptyException(String s) {
         super(s);
     }
 }
+/**.
+ * Exception for signaling invalid subset selection errors.
+ */
 class InvalidSubsetSelectionException extends Exception {
+    /**.
+     * Constructs the object.
+     *
+     * @param      s     { parameter_description }
+     */
     InvalidSubsetSelectionException(String s) {
         super(s);
     }
 }
+/**.
+ * Class for sorted set.
+ */
 public class SortedSet extends Set {
     /**.
      * { function_description }
