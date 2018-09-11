@@ -63,6 +63,22 @@ public class List {
     // replace the code below to implement the size method
     return size;
   }
+  /**.
+   * { function_description }
+   *
+   * @param      item  The item
+   */
+  public void add(final int index, final int item) {
+        /**.
+         * { item_description }
+         */
+        for (int i = size; i > index; i--) {
+            list[i] = list[i - 1];
+        }
+        list[index] = item;
+        size++;
+
+    }
   /**
    * removes an element from the list.
    *
