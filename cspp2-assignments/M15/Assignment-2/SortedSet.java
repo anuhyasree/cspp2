@@ -85,7 +85,8 @@ public class SortedSet extends Set {
     public int[] subSet(final int fromele, final int toele) throws
                                 InvalidSubsetSelectionException {
         if (fromele > toele) {
-            throw new InvalidSubsetSelectionException("Invalid Arguments to Subset Exception");
+            throw new InvalidSubsetSelectionException(
+                   "Invalid Arguments to Subset Exception");
         } else {
             int fromindex = getIndex(fromele);
             int toindex = getIndex(toele);
@@ -100,18 +101,31 @@ public class SortedSet extends Set {
     /**.
      * { function_description }
      *
-     * @param      toele  The toele
+     * @param      toele                            The toele
      *
      * @return     { description_of_the_return_value }
+     *
+     * @throws     SetEmptyException                { exception_description }
+     * @throws     InvalidSubsetSelectionException  { exception_description }
      */
     public int[] headset(final int toele) throws SetEmptyException,
         InvalidSubsetSelectionException {
+           /**.
+            * { item_description }
+            */
         if (toele <= this.get(0)) {
             throw new SetEmptyException("Set Empty Exception");
         } else {
             return subSet(get(0), toele);
         }
     }
+    /**.
+     * { function_description }
+     *
+     * @param      s     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public static int[] intArray(final String s) {
         String input = s;
         if (input.equals("[]")) {
