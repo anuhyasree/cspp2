@@ -66,7 +66,7 @@ public class List {
   /**.
    * { function_description }
    *
-   * @param      item  The item
+   * @param      index  The item
    */
   public void add(final int index, final int item) {
     /**.
@@ -79,10 +79,12 @@ public class List {
     size++;
 
   }
-  /**
-   * removes an element from the list.
+  /**.
+   * { function_description }
    *
-   * @param      index  The index
+   * @param      index      The index
+   *
+   * @throws     Exception  { exception_description }
    */
   public void remove(final int index) throws Exception {
     if (index < 0 || index >= size) {
@@ -185,10 +187,12 @@ public class List {
     }
     return c;
   }
-  /**
+  /**.
    * Removes all.
    *
-   * @param      newArray  The new array
+   * @param      newArray   The new array
+   *
+   * @throws     Exception  { exception_description }
    */
   public void removeAll(final int[] newArray) throws Exception {
     // write the logic
@@ -200,13 +204,15 @@ public class List {
       }
     }
   }
-  /**
-   * returns a part of the list.
+  /**.
+   * { function_description }
    *
-   * @param      start  The start
-   * @param      end    The end
+   * @param      start      The start
+   * @param      end        The end
    *
-   * @return     Another List.
+   * @return     { description_of_the_return_value }
+   *
+   * @throws     Exception  { exception_description }
    */
   public List subList(final int start, final int end) throws Exception {
     if (start > size || end > size) {
