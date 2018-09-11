@@ -72,6 +72,13 @@ public class SortedSet extends Set {
     public int[] headset(final int toele) {
         return subSet(get(0), toele);
     }
+/**.
+ * { function_description }
+ *
+ * @param      s     { parameter_description }
+ *
+ * @return     { description_of_the_return_value }
+ */
 public static int[] intArray(final String s) {
     String input = s;
     if (input.equals("[]")) {
