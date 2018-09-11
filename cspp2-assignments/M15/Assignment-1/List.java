@@ -66,7 +66,8 @@ public class List {
   /**.
    * { function_description }
    *
-   * @param      index  The item
+   * @param      index  The index
+   * @param      item   The item
    */
   public void add(final int index, final int item) {
     /**.
