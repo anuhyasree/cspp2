@@ -11,7 +11,7 @@ class SetEmptyException extends Exception {
      *
      * @param      s     { parameter_description }
      */
-    SetEmptyException(String s) {
+    SetEmptyException(final String s) {
         super(s);
     }
 }
@@ -24,7 +24,7 @@ class InvalidSubsetSelectionException extends Exception {
      *
      * @param      s     { parameter_description }
      */
-    InvalidSubsetSelectionException(String s) {
+    InvalidSubsetSelectionException(final String s) {
         super(s);
     }
 }
@@ -36,6 +36,8 @@ public class SortedSet extends Set {
      * { function_description }
      *
      * @return     { description_of_the_return_value }
+     *
+     * @throws     SetEmptyException  { exception_description }
      */
     public int last() throws SetEmptyException {
         if (size() == 0) {
@@ -73,12 +75,15 @@ public class SortedSet extends Set {
     /**.
      * { function_description }
      *
-     * @param      fromele  The fromele
-     * @param      toele    The toele
+     * @param      fromele                          The fromele
+     * @param      toele                            The toele
      *
      * @return     { description_of_the_return_value }
+     *
+     * @throws     InvalidSubsetSelectionException  { exception_description }
      */
-    public int[] subSet(final int fromele, final int toele) throws InvalidSubsetSelectionException {
+    public int[] subSet(final int fromele, final int toele) throws
+                                InvalidSubsetSelectionException {
         if (fromele > toele) {
             throw new InvalidSubsetSelectionException("Invalid Arguments to Subset Exception");
         } else {
