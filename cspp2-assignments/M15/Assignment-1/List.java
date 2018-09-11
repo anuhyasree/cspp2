@@ -302,7 +302,7 @@ public class List {
         }
        }
        catch(Exception e){
-       	e.getStackTrace();
+       	System.out.println("Invalid Position Exception");
        }
         break;
       case "indexOf":
@@ -344,7 +344,7 @@ public class List {
           l.removeAll(a);
         }
     	} catch(Exception r) {
-    		r.getStackTrace();
+    		System.out.println("Invalid Position Exception");
     	}
         break;
       case "subList":
@@ -359,7 +359,7 @@ public class List {
           System.out.println(object);
         }
       } catch (Exception s){
-        s.getStackTrace();
+        System.out.println("Index Out Of Bounds Exception");
       }
         break;
       case "equals":
