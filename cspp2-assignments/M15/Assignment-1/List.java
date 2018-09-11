@@ -208,17 +208,20 @@ public class List {
    *
    * @return     Another List.
    */
-  public List subList(final int start, final int end) {
+  public List subList(final int start, final int end) throws Exception {
     final int optSize = 500;
     List sL = new List(optSize);
     if (start < size && end <= size && start <= end && start > 0 && end > 0) {
+      throw new Exception();
+    } else{
       for (int i = start; i < end; i++) {
         sL.add(list[i]);
       }
-    } else {
-      System.out.println("Index Out of Bounds Exception");
-      return null;
     }
+    // else {
+    //   System.out.println("Index Out of Bounds Exception");
+    //   return null;
+    // }
     return sL;
   }
   /**
@@ -342,6 +345,7 @@ public class List {
     	}
         break;
       case "subList":
+        try{
         if (tokens.length != 2) {
           break;
         }
@@ -351,6 +355,9 @@ public class List {
         if (object != null) {
           System.out.println(object);
         }
+      } catch (Exception s){
+        s.getStackTrace();
+      }
         break;
       case "equals":
         if (tokens.length == 2) {
@@ -365,6 +372,8 @@ public class List {
       case "clear":
         l.clear();
         break;
+        case "count":
+          System.out.println(l.count(Integer.parseInt(tokens[1])));
       default:
         break;
       }
