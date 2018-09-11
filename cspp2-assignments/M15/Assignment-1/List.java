@@ -69,25 +69,25 @@ public class List {
    * @param      item  The item
    */
   public void add(final int index, final int item) {
-        /**.
-         * { item_description }
-         */
-        for (int i = size; i > index; i--) {
-            list[i] = list[i - 1];
-        }
-        list[index] = item;
-        size++;
-
+    /**.
+     * { item_description }
+     */
+    for (int i = size; i > index; i--) {
+      list[i] = list[i - 1];
     }
+    list[index] = item;
+    size++;
+
+  }
   /**
    * removes an element from the list.
    *
    * @param      index  The index
    */
-  public void remove(final int index) throws Exception{
-  	if (index < 0 || index >= size) {
-  		throw new Exception();
-  	}
+  public void remove(final int index) throws Exception {
+    if (index < 0 || index >= size) {
+      throw new Exception();
+    }
     if (index >= 0 && index < size) {
       for (int i = index; i < size - 1; i++) {
         list[i] = list[i + 1];
@@ -296,14 +296,13 @@ public class List {
         System.out.println(l);
         break;
       case "remove":
-      	try {
-        if (tokens.length == 2) {
-          l.remove(Integer.parseInt(tokens[1]));
+        try {
+          if (tokens.length == 2) {
+            l.remove(Integer.parseInt(tokens[1]));
+          }
+        } catch (Exception e) {
+          System.out.println("Invalid Position Exception");
         }
-       }
-       catch(Exception e){
-       	System.out.println("Invalid Position Exception");
-       }
         break;
       case "indexOf":
         if (tokens.length == 2) {
@@ -334,33 +333,33 @@ public class List {
         }
         break;
       case "removeAll":
-      	try{
-        if (tokens.length == 2) {
-          String[] t2 = tokens[1].split(",");
-          int[] a = new int[t2.length];
-          for (int i = 0; i < t2.length; i++) {
-            a[i] = Integer.parseInt(t2[i]);
+        try {
+          if (tokens.length == 2) {
+            String[] t2 = tokens[1].split(",");
+            int[] a = new int[t2.length];
+            for (int i = 0; i < t2.length; i++) {
+              a[i] = Integer.parseInt(t2[i]);
+            }
+            l.removeAll(a);
           }
-          l.removeAll(a);
+        } catch (Exception r) {
+          System.out.println("Invalid Position Exception");
         }
-    	} catch(Exception r) {
-    		System.out.println("Invalid Position Exception");
-    	}
         break;
       case "subList":
-        try{
-        if (tokens.length != 2) {
-          break;
+        try {
+          if (tokens.length != 2) {
+            break;
+          }
+          String[] arrstring3 = tokens[1].split(",");
+          List object = l.subList(Integer.parseInt(arrstring3[0]),
+                                  Integer.parseInt(arrstring3[1]));
+          if (object != null) {
+            System.out.println(object);
+          }
+        } catch (Exception s) {
+          System.out.println("Index Out of Bounds Exception");
         }
-        String[] arrstring3 = tokens[1].split(",");
-        List object = l.subList(Integer.parseInt(arrstring3[0]),
-                                Integer.parseInt(arrstring3[1]));
-        if (object != null) {
-          System.out.println(object);
-        }
-      } catch (Exception s){
-        System.out.println("Index Out of Bounds Exception");
-      }
         break;
       case "equals":
         if (tokens.length == 2) {
@@ -375,8 +374,8 @@ public class List {
       case "clear":
         l.clear();
         break;
-        case "count":
-          System.out.println(l.count(Integer.parseInt(tokens[1])));
+      case "count":
+        System.out.println(l.count(Integer.parseInt(tokens[1])));
       default:
         break;
       }
