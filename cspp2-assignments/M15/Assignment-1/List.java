@@ -209,20 +209,23 @@ public class List {
    * @return     Another List.
    */
   public List subList(final int start, final int end) throws Exception {
-    final int optSize = 500;
-    List sL = new List(optSize);
-    if (start < size && end <= size && start <= end && start > 0 && end > 0) {
+    if (start > size || end > size) {
       throw new Exception();
-    } else{
-      for (int i = start; i < end; i++) {
-        sL.add(list[i]);
-      }
     }
-    // else {
-    //   System.out.println("Index Out of Bounds Exception");
-    //   return null;
-    // }
-    return sL;
+    if (start < 0 || end < 0) {
+      throw new Exception();
+    }
+    if (start > end) {
+      throw new Exception();
+    }
+    if (start == end) {
+      throw new Exception();
+    }
+    List subList = new List(end - start);
+    for (int i = start; i < end; i++) {
+      subList.add(this.get(i));
+    }
+    return subList;
   }
   /**
    * compares 2 lists.
