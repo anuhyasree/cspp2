@@ -70,12 +70,11 @@ public final class Solution {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
-        if (questionCount > 0) {
-            String line = s.nextLine();
+
+        String line = s.nextLine();
         String[] tokens = line.split(",");
         // questionCount = add.Quiz(tokens);
-
-        }
+        System.out.println(tokens);
     }
 
     /**
