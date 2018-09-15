@@ -1,16 +1,24 @@
 import java.util.Scanner;
-import java.util.*;
 
-/**
- * Solution class for code-eval.
+/**.
+ * Class for quiz.
  */
 class Quiz {
+    /**.
+     * Constructs the object.
+     */
 
     Quiz() {
+        /**.
+         * { item_description }
+         */
 
     }
 }
 
+/**.
+ * { item_description }
+ */
 public final class Solution {
      /**
      * Constructs the object.
@@ -66,7 +74,8 @@ public final class Solution {
      * @param      quiz           The quiz object
      * @param      questionCount  The question count
      */
-    public static void loadQuestions(final Scanner s, final Quiz quiz, final int questionCount) {
+    public static void loadQuestions(final Scanner s,
+                    final Quiz quiz, final int questionCount) {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
