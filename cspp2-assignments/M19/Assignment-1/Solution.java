@@ -74,7 +74,7 @@ public final class Solution {
         String line = s.nextLine();
         String[] tokens = line.split(",");
         // questionCount = add.Quiz(tokens);
-        System.out.println(tokens[1]);
+        System.out.println(tokens[0]);
     }
 
     /**
