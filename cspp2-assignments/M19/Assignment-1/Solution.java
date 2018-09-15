@@ -72,7 +72,7 @@ public final class Solution {
         // add the question objects to the quiz class
 
         String line = s.nextLine();
-        String[] tokens = line.split(":");
+        String[] tokens = line.split("question");
         // questionCount = add.Quiz(tokens);
         System.out.println(tokens[0]);
     }
