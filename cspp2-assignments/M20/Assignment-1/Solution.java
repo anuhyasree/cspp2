@@ -249,6 +249,11 @@ public final class Solution {
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
         // System.out.println(q + " are added to the quiz");
+        for (int i = 0; i < q; i++) {
+            String line = scan.nextLine();
+            String[] qtext = line.split(":");
+            System.out.println(qtext[i]);
+        }
 
     }
     /**
