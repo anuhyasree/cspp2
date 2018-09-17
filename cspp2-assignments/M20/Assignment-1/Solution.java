@@ -44,6 +44,11 @@ class Question {
      */
     Question(final String question1, final String[] choices1,
         final int correctAnswer1, final int maxMarks1, final int penalty1) {
+        this.questiontext = question1;
+        this.choices = choices1;
+        this.correctAnswer = correctAnswer1;
+        this.maxMarks = maxMarks1;
+        this.penalty = penalty1;
 
     }
     /**
@@ -54,7 +59,7 @@ class Question {
      * @return     { description_of_the_return_value }
      */
     public boolean evaluateResponse(final String choice) {
-        return false;
+        return getCorrectAnswer().equals(choice);
     }
     /**
      * Gets the correct answer.
@@ -62,6 +67,9 @@ class Question {
      * @return     The correct answer.
      */
     public String getCorrectAnswer() {
+        if (this.choices.length >= this.correctAnswer) {
+            return this.choices[this.correctAnswer-1];
+        }
         return null;
     }
     /**
@@ -70,7 +78,7 @@ class Question {
      * @return     The question text.
      */
     public String getQuestionText() {
-        return null;
+        return this.questiontext;
     }
     /**
      * Gets the choice.
@@ -78,7 +86,7 @@ class Question {
      * @return     The choice.
      */
     public String[] getChoice() {
-        return null;
+        return this.choices;
     }
     /**
      * Gets the maximum marks.
@@ -86,7 +94,7 @@ class Question {
      * @return     The maximum marks.
      */
     public int getMaxMarks() {
-        return 1;
+        return this.maxMarks;
     }
     /**
      * Gets the penalty.
@@ -94,7 +102,7 @@ class Question {
      * @return     The penalty.
      */
     public int getPenalty() {
-        return 1;
+        return this.penalty;
     }
     /**
      * Sets the response.
@@ -102,7 +110,7 @@ class Question {
      * @param      answer  The answer
      */
     public void setResponse(final String answer) {
-
+        this.response = answer;
     }
     /**
      * Gets the response.
@@ -110,7 +118,7 @@ class Question {
      * @return     The response.
      */
     public String getResponse() {
-        return null;
+        return this.response;
     }
     /**
      * Returns a string representation of the object.
@@ -142,6 +150,8 @@ class Quiz {
      * Constructs the object.
      */
     Quiz() {
+        this.questions = new Question[onehundred];
+        this.size = 0;
 
     }
     /**
@@ -150,6 +160,7 @@ class Quiz {
      * @param      q     The question
      */
     public void addQuestion(final Question q) {
+        this.questions[this.size++] = q;
 
     }
     /**
@@ -160,7 +171,7 @@ class Quiz {
      * @return     The question.
      */
     public Question getQuestion(final int index) {
-        return null;
+        return this.questions[index];
     }
     /**
      * Shows the report.
@@ -237,7 +248,8 @@ public final class Solution {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
-        System.out.println(q + "are added to the quiz");
+        // System.out.println(q + " are added to the quiz");
+
     }
     /**
      * Starts a quiz.
