@@ -68,7 +68,7 @@ class Question {
      */
     public String getCorrectAnswer() {
         if (this.choices.length >= this.correctAnswer) {
-            return this.choices[this.correctAnswer-1];
+            return this.choices[this.correctAnswer - 1];
         }
         return null;
     }
