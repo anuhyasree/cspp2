@@ -252,15 +252,48 @@ public final class Solution {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
+        final int three = 3;
+        final int four = 4;
+        final int five = 5;
         if (q > 0) {
             for (int i = 0; i < q; i++) {
-            String line = scan.nextLine();
-            String[] questiontext = line.split(":");
-            String[] choice = questiontext[1].split(",");
+                String line = scan.nextLine();
+                String[] input = line.split(":");
+                if (input.length == five && input[0].length() > 1) {
+                    String[] choic = input[1].split(",");
+                    if (choic.length > 1) {
+                        if (Integer.parseInt(input[2]) <= choic.length) {
+                            if (Integer.parseInt(input[three]) > 0) {
+                                if (Integer.parseInt(input[four]) <= 0) {
+                                    quiz.addQuestion(new Question(input[0],
+                                        choic, Integer.parseInt(input[2]),
+                                        Integer.parseInt(input[three]),
+                                        Integer.parseInt(input[four])));
+                                } else {
+                                    throw new Exception("Invalid penalty for "
+                                        + input[0]);
+                                }
+                            } else {
+                                throw new Exception(
+                                    "Invalid max marks for " + input[0]);
+                            }
+                        } else {
+                            throw new Exception(
+                                "Error! Correct answer choice number"
+                                + " is out of range for " + input[0]);
+                        }
+                    } else {
+                        throw new Exception(input[0]
+                            + " does not have enough answer choices");
+                    }
+                } else {
+                    throw new Exception("Error! Malformed question");
+                }
+            }
+            System.out.println(q + " are added to the quiz");
+        } else {
+            throw new Exception("Quiz does not have questions");
         }
-
-        System.out.println(q + " are added to the quiz");
-        } throw new Exception("Quiz does not have questions");
     }
     /**
      * Starts a quiz.
