@@ -49,7 +49,6 @@ class Question {
         this.correctAnswer = correctAnswer1;
         this.maxMarks = maxMarks1;
         this.penalty = penalty1;
-
     }
     /**
      * { function_description }.
@@ -127,6 +126,10 @@ class Question {
      */
     public String toString() {
         String s = "";
+        s += getQuestionText() + "(" + getMaxMarks() + ")" + "\n";
+        for (int i = 0; i < this.choices.length - 1; i++) {
+            s += this.choices[i] + "\t";
+        } s += this.choices[this.choices.length - 1] + "\n";
         return s;
     }
 }
@@ -152,7 +155,6 @@ class Quiz {
     Quiz() {
         this.questions = new Question[onehundred];
         this.size = 0;
-
     }
     /**
      * Adds a question.
@@ -161,7 +163,6 @@ class Quiz {
      */
     public void addQuestion(final Question q) {
         this.questions[this.size++] = q;
-
     }
     /**
      * Gets the question.
@@ -180,6 +181,24 @@ class Quiz {
      */
     public String showReport() {
         String s = "";
+        int score = 0, c = 0;
+        for (int i = 0; i < this.size; i++) {
+            s += questions[i].getQuestionText() + "\n";
+            if (questions[i].evaluateResponse(questions[i].getResponse())) {
+                s += " Correct Answer! - Marks Awarded: "
+                    + questions[i].getMaxMarks() + "\n";
+                score += questions[i].getMaxMarks();
+                c++;
+            } else {
+                s += " Wrong Answer! - Penalty: "
+                    + questions[i].getPenalty() + "\n";
+                score += questions[i].getPenalty();
+                c++;
+            }
+        }
+        if (c > 0) {
+            s += "Total Score: " + score;
+        }
         return s;
     }
     /**
@@ -202,14 +221,16 @@ public final class Solution {
         // leave this blank
     }
     /**
-     * main function to execute test cases.
+     * Main function.
      *
-     * @param      args  The arguments
+     * @param      args       The arguments
+     *
+     * @throws     Exception  { exception_description }
      */
-    public static void main(final String[] args) {
-         // instantiate this Quiz
+    public static void main(final String[] args) throws Exception {
+        // instantiate this Quiz
         Quiz q = new Quiz();
-         // code to read the test cases input file
+        // code to read the test cases input file
         Scanner s = new Scanner(System.in);
         // check if there is one more line to process
         while (s.hasNext()) {
@@ -225,7 +246,7 @@ public final class Solution {
                 System.out.println("|----------------|");
                 try {
                     loadQuestions(s, q, Integer.parseInt(tokens[1]));
-                    } catch (Exception e) {
+                } catch (Exception e) {
                     System.out.println(e.getMessage());
                 }
                 break;
@@ -246,7 +267,7 @@ public final class Solution {
             }
         }
     }
-    /**.
+    /**
      * Loads questions.
      *
      * @param      scan       The scan
@@ -333,4 +354,3 @@ public final class Solution {
         System.out.println(quiz.showReport());
     }
 }
-
