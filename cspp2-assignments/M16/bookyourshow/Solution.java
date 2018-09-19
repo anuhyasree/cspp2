@@ -1,19 +1,11 @@
 import java.util.Scanner;
-/**
- * main method to read the input.
- */
+
 public final class Solution {
-    /**
-     * Constructs the object.
-     */
+
     private Solution() {
 
     }
-    /**
-     * main method to drive program.
-     * used to drive the program.
-     * @param args  The arguments
-     */
+
     public static void main(final String[] args) {
         BookYourShow bys = new BookYourShow();
         Scanner scan = new Scanner(System.in);

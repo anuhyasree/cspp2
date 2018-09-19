@@ -7,12 +7,10 @@ class Quiz {
     /**.
      * Constructs the object.
      */
-
     Quiz() {
         /**.
          * { item_description }
          */
-
     }
 }
 
@@ -82,11 +80,10 @@ public final class Solution {
 
         String line = s.nextLine();
         String[] tokens = line.split(":");
+        String[] token = tokens.split(",");
         // questionCount = add.Quiz(tokens);
         // System.out.println(tokens[0]);
-
     }
-
     /**
      * Starts a quiz.
      *

@@ -1,19 +1,19 @@
 class WaterLog extends Log {
-    int quantity;
-    WaterLog (int quant, String d, String t) {
-        quantity = quant;
-        this.setDate(d);
-        this.setTime(t);
-        
-    }
-    public int getQuantity() {
-        return quantity;
-    }
-    public void setQuantity (int quant) {
-        this.quantity = quant;
-    }
-    public String toString() {
-        System.out.println("Water");
-        return "Date:" +this.getDate() + "\n" + "Quantity:" + this.getQuantity() + "ml";
-    }
+	int quantity;
+	WaterLog(int quantity, String date, String time) {
+		this.quantity = quantity;
+		this.setDate(date);
+		this.setTime(time);
+
+	}
+	public int getQuantity() {
+		return quantity;
+	}
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+	public String toString() {
+		System.out.println("Water");
+		return "Date:" + this.getDate() + "\n" + "Quantity:" + this.getQuantity() + "ml";
+	}
 }
