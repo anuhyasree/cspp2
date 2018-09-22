@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.Arrays;
 
 /**
   * write your code below this comment
@@ -49,7 +48,7 @@ class Task {
         this.important = important;
         this.urgent = urgent;
 
-        if (title.length() > 0 ) {
+        if (title.length() > 0) {
             this.title = title;
         } else {
             throw new Exception("Title not provided");
@@ -94,6 +93,15 @@ class Task {
  * Class for todoist main.
  */
 public class TodoistMain {
+
+    /**.
+     * Constructs the object.
+     */
+    public TodoistMain() {
+        /**.
+         * { item_description }
+         */
+    }
 
     /**
      * Starts a test.
