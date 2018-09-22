@@ -42,7 +42,7 @@ class Task {
      */
     Task(final String title, final String assignedTo,
            final int timeToComplete, final boolean important,
-           final boolean urgent, final String status) throws Exception {
+           final boolean urgent, final String stat) throws Exception {
 
         this.title = title;
         this.assignedTo = assignedTo;
@@ -56,10 +56,10 @@ class Task {
         if (timeToComplete < 0) {
             throw new Exception("Invalid timeToComplete " + timeToComplete);
         }
-        if (status.equals("todo") && status.equals("done")) {
-            this.status = status;
+        if (stat.equals("todo") || stat.equals("done")) {
+            status = stat;
         } else {
-            throw new Exception("Invalid status " + status);
+            throw new Exception("Invalid status " + stat);
         }
     }
     /**.
