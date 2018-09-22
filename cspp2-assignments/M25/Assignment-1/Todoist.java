@@ -19,6 +19,7 @@ class Todoist {
 		String out = "";
 		for (Task entry : tasks) {
 			out += entry.toString() + "/n";
+			out += "\n";
 		}
 		return out;
 	}
