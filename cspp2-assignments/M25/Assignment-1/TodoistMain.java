@@ -41,25 +41,25 @@ class Task {
      * @param      status          The status
      * @throws     Exception  if task inputs are invalid
      */
-    Task(final String title, final String assignedTo,
-         final int timeToComplete, final boolean important,
-         final boolean urgent, final String status) throws Exception {
+    Task(final String titles, final String assignedTos,
+         final int timeToCompletes, final boolean importants,
+         final boolean urgents, final String statuss) throws Exception {
 
-        this.assignedTo = assignedTo;
-        this.timeToComplete = timeToComplete;
-        this.important = important;
-        this.urgent = urgent;
+        assignedTo = assignedTos;
+        timeToComplete = timeToCompletes;
+        important = importants;
+        urgent = urgents;
 
         if (title.length() > 0) {
-            this.title = title;
+            title = titles;
         } else {
             throw new Exception("Title not provided");
         }
         if (timeToComplete < 0) {
             throw new Exception("Invalid timeToComplete " + timeToComplete);
         }
-        if (status.equals("todo") || status.equals("done")) {
-            this.status = status;
+        if (statuss.equals("todo") || statuss.equals("done")) {
+            status = statuss;
         } else {
             throw new Exception("Invalid status " + status);
         }
@@ -148,11 +148,11 @@ public class TodoistMain {
      */
     public static void testAddTask(final Todoist todo,
                                    final String[] tokens) {
-        // try {
-        //  todo.addTask(createTask(tokens));
-        // } catch (Exception e) {
-        //  System.out.println(e.getMessage());
-        // }
+        try {
+         todo.addTask(createTask(tokens));
+        } catch (Exception e) {
+         System.out.println(e.getMessage());
+        }
     }
 
     /**
@@ -168,6 +168,23 @@ public class TodoistMain {
         }
     }
 
+    /**.
+     * { var_description }
+     */
+    public static final int three = 3;
+    /**.
+     * { var_description }
+     */
+    public static final int four = 4;
+    /**.
+     * { var_description }
+     */
+    public static final int five = 5;
+    /**.
+     * { var_description }
+     */
+    public static final int six = 6;
+
     /**
      * Creates a task object.
      *
@@ -180,10 +197,10 @@ public class TodoistMain {
     public static Task createTask(final String[] tokens) throws Exception {
         String title = tokens[1];
         String assignedTo = tokens[2];
-        int timeToComplete = Integer.parseInt(tokens[3]);
-        boolean important = tokens[4].equals("y");
-        boolean urgent = tokens[5].equals("y");
-        String status = tokens[6];
+        int timeToComplete = Integer.parseInt(tokens[three]);
+        boolean important = tokens[four].equals("y");
+        boolean urgent = tokens[five].equals("y");
+        String status = tokens[six];
         return new Task(
                    title, assignedTo, timeToComplete,
                    important, urgent, status);
@@ -228,3 +245,4 @@ public class TodoistMain {
         startTest();
     }
 }
+
