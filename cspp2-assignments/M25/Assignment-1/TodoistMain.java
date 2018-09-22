@@ -56,7 +56,7 @@ class Task {
         if (timeToComplete < 0) {
             throw new Exception("Invalid timeToComplete " + timeToComplete);
         }
-        if (status.equals("todo") || status.equals("done")) {
+        if (status.equals("todo") && status.equals("done")) {
             this.status = status;
         } else {
             throw new Exception("Invalid status " + status);
@@ -67,7 +67,7 @@ class Task {
      *
      * @return     String representation of the object.
      */
-    public String toString () {
+    public String toString() {
         String importantmsg = "";
         String urgentmsg = "";
 
@@ -88,7 +88,8 @@ class Task {
 
     }
 }
-/**
+
+/**.
  * Class for todoist main.
  */
 public class TodoistMain {
