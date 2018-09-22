@@ -14,7 +14,7 @@ class Task {
 
 	Task (String title, String assignedTo,
 	      int timeToComplete, boolean important,
-	      boolean urgent, String status) {
+	      boolean urgent, String status) throws Exception {
 
 		this.title = title;
 		this.assignedTo = assignedTo;
@@ -22,6 +22,7 @@ class Task {
 		this.important = important;
 		this.urgent = urgent;
 		this.status = status;
+
 
 	}
 	public String toString () {
@@ -131,13 +132,35 @@ public class TodoistMain {
 		return new Task(
 		           title, assignedTo, timeToComplete, important, urgent, status);
 	}
-	public static Task getNextTask (String name) {
+	/**.
+	 * Gets the next task.
+	 *
+	 * @param      name  The name
+	 *
+	 * @return     The next task.
+	 */
+	public static Task getNextTask (final String name) {
 		return null;
 	}
-	public static Task getNextTask (String name, int count) {
+	/**.
+	 * Gets the next task.
+	 *
+	 * @param      name   The name
+	 * @param      count  The count
+	 *
+	 * @return     The next task.
+	 */
+	public static Task getNextTask (final String name, final int count) {
 		return null;
 	}
-	public static int  totalTime4Completion (int totaltime) {
+	/**.
+	 * { function_description }
+	 *
+	 * @param      totaltime  The totaltime
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
+	public static int  totalTime4Completion (final int totaltime) {
 		return totaltime;
 	}
 	/**
@@ -145,7 +168,7 @@ public class TodoistMain {
 	 *
 	 * @param      args  The command line arguments
 	 */
-	public static void main (final String[] args) {
+	public static void main(final String[] args) {
 		startTest();
 	}
 }
