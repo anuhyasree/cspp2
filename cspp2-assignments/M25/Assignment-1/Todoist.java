@@ -6,8 +6,7 @@ class Todoist {
 	private int size;
 
 	Todoist() {
-		final int max = 100;
-		tasks = new Task[max];
+		tasks = new Task[100];
 		size = 0;
 	}
 	public void addTask(final Task tsk) {
