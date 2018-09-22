@@ -41,25 +41,26 @@ class Task {
      * @param      status          The status
      */
     Task(final String title, final String assignedTo,
-           final int timeToComplete, final boolean important,
-           final boolean urgent, final String stat) throws Exception {
+         final int timeToComplete, final boolean important,
+         final boolean urgent, final String status) throws Exception {
 
-        this.title = title;
         this.assignedTo = assignedTo;
         this.timeToComplete = timeToComplete;
         this.important = important;
         this.urgent = urgent;
 
-        if (title.length() < 0) {
+        if (title.length() > 0 ) {
+            this.title = title;
+        } else {
             throw new Exception("Title not provided");
         }
         if (timeToComplete < 0) {
             throw new Exception("Invalid timeToComplete " + timeToComplete);
         }
-        if (stat.equals("todo") || stat.equals("done")) {
-            status = stat;
+        if (status.equals("todo") || status.equals("done")) {
+            this.status = status;
         } else {
-            throw new Exception("Invalid status " + stat);
+            throw new Exception("Invalid status " + status);
         }
     }
     /**.
@@ -136,7 +137,7 @@ public class TodoistMain {
      * @param      tokens  The tokens
      */
     public static void testAddTask(final Todoist todo,
-                                     final String[] tokens) {
+                                   final String[] tokens) {
         // try {
         //  todo.addTask(createTask(tokens));
         // } catch (Exception e) {
