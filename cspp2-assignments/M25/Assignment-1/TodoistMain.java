@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-/**
+/**.
   * write your code below this comment
   */
 class Task {
@@ -12,7 +12,7 @@ class Task {
      * { var_description }
      */
     private String assignedTo;
-    /**
+    /**.
      * { var_description }
      */
     private int timeToComplete;
@@ -29,6 +29,7 @@ class Task {
      */
     private String status;
 
+
     /**.
      * Constructs the object.
      *
@@ -38,6 +39,7 @@ class Task {
      * @param      important       The important
      * @param      urgent          The urgent
      * @param      status          The status
+     * @throws     Exception  if task inputs are invalid
      */
     Task(final String title, final String assignedTo,
          final int timeToComplete, final boolean important,
