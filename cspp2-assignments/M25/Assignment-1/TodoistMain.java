@@ -5,11 +5,11 @@ import java.util.Arrays;
   * write your code below this comment
   */
 class Task {
-	String title;
-	String assignedTo;
-	int timeToComplete;
-	boolean important;
-	boolean urgent;
+	private String title;
+	private String assignedTo;
+	private int timeToComplete;
+	private boolean important;
+	private boolean urgent;
 	String status;
 
 	Task (String title, String assignedTo,
@@ -91,7 +91,7 @@ public class TodoistMain {
 	 * @param      todo    The todo
 	 * @param      tokens  The tokens
 	 */
-	public static void testAddTask(final Todoist todo, final String[] tokens) {
+	public static void testAddTask (final Todoist todo, final String[] tokens) {
 		// try {
 		// 	todo.addTask(createTask(tokens));
 		// } catch (Exception e) {
@@ -104,7 +104,7 @@ public class TodoistMain {
 	 *
 	 * @param      tokens  The tokens
 	 */
-	public static void testTask(final String[] tokens) {
+	public static void testTask (final String[] tokens) {
 		try {
 			System.out.println(createTask(tokens));
 		} catch (Exception e) {
@@ -121,7 +121,7 @@ public class TodoistMain {
 	 *
 	 * @throws     Exception  if task inputs are invalid
 	 */
-	public static Task createTask(final String[] tokens) throws Exception {
+	public static Task createTask (final String[] tokens) throws Exception {
 		String title = tokens[1];
 		String assignedTo = tokens[2];
 		int timeToComplete = Integer.parseInt(tokens[3]);
@@ -145,7 +145,7 @@ public class TodoistMain {
 	 *
 	 * @param      args  The command line arguments
 	 */
-	public static void main(final String[] args) {
+	public static void main (final String[] args) {
 		startTest();
 	}
 }
