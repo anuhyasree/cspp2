@@ -40,9 +40,9 @@ class Task {
      * @param      urgent          The urgent
      * @param      status          The status
      */
-    Task ( String title, String assignedTo,
-           int timeToComplete, boolean important,
-           boolean urgent, String status) throws Exception {
+    Task(final String title, final String assignedTo,
+           final int timeToComplete, final boolean important,
+           final boolean urgent, final String status) throws Exception {
 
         this.title = title;
         this.assignedTo = assignedTo;
@@ -134,7 +134,7 @@ public class TodoistMain {
      * @param      todo    The todo
      * @param      tokens  The tokens
      */
-    public static void testAddTask ( final Todoist todo,
+    public static void testAddTask(final Todoist todo,
                                      final String[] tokens) {
         // try {
         //  todo.addTask(createTask(tokens));
@@ -148,7 +148,7 @@ public class TodoistMain {
      *
      * @param      tokens  The tokens
      */
-    public static void testTask ( final String[] tokens) {
+    public static void testTask(final String[] tokens) {
         try {
             System.out.println(createTask(tokens));
         } catch (Exception e) {
@@ -165,7 +165,7 @@ public class TodoistMain {
      *
      * @throws     Exception  if task inputs are invalid
      */
-    public static Task createTask ( final String[] tokens) throws Exception {
+    public static Task createTask(final String[] tokens) throws Exception {
         String title = tokens[1];
         String assignedTo = tokens[2];
         int timeToComplete = Integer.parseInt(tokens[3]);
@@ -183,7 +183,7 @@ public class TodoistMain {
      *
      * @return     The next task.
      */
-    public static Task getNextTask ( final String name) {
+    public static Task getNextTask(final String name) {
         return null;
     }
     /**.
@@ -194,7 +194,7 @@ public class TodoistMain {
      *
      * @return     The next task.
      */
-    public static Task getNextTask ( final String name, final int count) {
+    public static Task getNextTask(final String name, final int count) {
         return null;
     }
     /**.
@@ -204,7 +204,7 @@ public class TodoistMain {
      *
      * @return     { description_of_the_return_value }
      */
-    public static int  totalTime4Completion ( final int totaltime) {
+    public static int  totalTime4Completion(final int totaltime) {
         return totaltime;
     }
     /**
