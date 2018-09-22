@@ -10,15 +10,14 @@ class Todoist {
 		size = 0;
 	}
 	public void addTask(final Task tsk) {
-		tasks[size] = tsk;
-		size += 1;
+		tasks[size++] = tsk;
 	}
 
 	public String toString() {
 		String out = "";
 		for (Task entry : tasks) {
 			out += entry.toString() + "/n";
-			out += "\n";
+			// out += "\n";
 		}
 		return out;
 	}
